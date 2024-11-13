@@ -5,9 +5,11 @@ import viteLogo from '/vite.svg'
 import './App.css'
 
 import WebApp from '@twa-dev/sdk'
+import { MainButton } from '@twa-dev/sdk/react';
 
 function App() {
   const [count, setCount] = useState(0)
+  
 
   return (
     <>
@@ -33,6 +35,7 @@ function App() {
         <button onClick={() => WebApp.showAlert(`Hello World! Current count is ${count}`)}>
             Show Alert
         </button>
+        <MainButton text="Continue" onClick={() => alert('continue')} />
       </div>
     </>
   )
